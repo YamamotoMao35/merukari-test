@@ -90,7 +90,99 @@ small{
 
 
 .registration-page {
-  @media screen and (min-width: 500px){
+  @media screen and (min-width: 769px){
+    padding: 0 0 220px;
+    .new-registration {
+      &__header {
+        height: 128px;
+        text-align: center;
+        h1 {
+          display: inline-block;
+          margin: 40px 0 0;
+          a {
+            display: inline-block;
+            width: 185px;
+            height: 49px;
+            line-height: 49px;
+            margin: 0 8px 0 0;
+          }
+          img {
+            width: 185px;
+            height: 49px;
+          }
+        }
+      }
+    }
+    .registration-menu{
+      .registration-title{
+        width: 700px;
+        margin: 0 auto;
+        background: #fff;
+        &__head {
+          padding: 32px 16px;
+          font-size: 22px;
+          line-height: 1.5;
+          text-align: center;
+          font-weight: bold;
+        }
+        .registration-box{
+          border-top: 1px solid #f5f5f5;
+          padding: 64px;
+          &__content{
+            max-width: 320px;
+            margin: 0 auto;
+            .icon-mail{
+              position: absolute;
+              top: 50%;
+              left: 16px;
+              transform: translate(0, -50%);
+              color: #ccc;
+              font-size: 20px;
+            }
+            .icon-facebook{
+              font-size: 26px;
+              color: #fff;
+              background: #385185
+            }
+          }
+        }
+      }
+    }
+    .registration-footer {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      height: 140px;
+      padding: 40px 0;
+      margin: 0 auto;
+      text-align: center;
+      width: 456px;
+      ul {
+        font-size: 0;
+      }
+      li {
+        display: inline-block;
+        margin: 0 0 0 16px;
+        font-size: 12px;
+      }
+      a {
+        display: block;
+        color: #333;
+      }
+      &__logo {
+        width: 80px;
+        height: 65px;
+        margin: 40px auto 0;
+      }
+      p{
+        margin: 8px 0 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px){
     padding: 0 0 250px;
     .new-registration {
       &__header {
@@ -114,7 +206,7 @@ small{
     }
     .registration-menu{
       .registration-title{
-        background-color: #fff;
+        background: #fff;
         &__head {
           padding: 24px 8px;
           font-size: 18px;
@@ -150,7 +242,7 @@ small{
       bottom: 0;
       left: 0;
       z-index: 1;
-      height: 250px;
+      height: 170px;
       padding: 40px 0;
       text-align: center;
       ul {
