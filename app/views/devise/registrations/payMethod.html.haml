@@ -1,0 +1,11 @@
+.personal-entry
+  = render "items/entry-header"
+  %main.personal-entry__main
+    %section.entry-container
+      %h2.sms-head
+      お支払い方法
+    = form_for @payMethod do |f|
+      %li.actions
+        = link_to complete_path do
+          = f.submit "次へ進む", class:"btn-default btn-red"
+  = render "items/entry-footer"

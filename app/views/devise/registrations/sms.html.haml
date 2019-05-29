@@ -1,0 +1,11 @@
+.personal-entry
+  = render "items/entry-header"
+  %main.personal-entry__main
+    %section.entry-container
+      %h2.sms-head
+      電話番号の確認
+    = form_for @sms do |f|
+      %li.actions
+        = link_to address_path do
+          = f.submit "SMSを送信する", class:"btn-default btn-red"
+  = render "items/entry-footer"
