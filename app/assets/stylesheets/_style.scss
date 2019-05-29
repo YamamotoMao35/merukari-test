@@ -5,6 +5,10 @@
 }
 
 * {
+  box-sizing: border-box;
+}
+
+* {
   font-size: inherit;
   line-height: inherit;
 }
@@ -14,7 +18,7 @@
   border-width: 0;
 }
 
-*, ::before, ::after {
+::before, ::after {
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
@@ -63,6 +67,29 @@ label {
 
 .text-right{
   text-align: right;
+}
+
+select{
+  outline:none;
+  text-indent: 0.01px;
+  vertical-align: middle;
+  color: inherit;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+}
+
+select option{
+background-color: #fff;
+color: #333;
+}
+
+select::-ms-expand {
+display: none;
+}
+
+select:-moz-focusring { 
+color: transparent; 
+text-shadow: 0 0 0 #828c9a;
 }
 
 .clearfix{

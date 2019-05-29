@@ -1,0 +1,26 @@
+li:first-child{
+  margin: 0;
+}
+li{
+  margin: 40px 0 0;
+  %label{
+    font-weight: 600;
+  }
+  .form-require{
+    background: #ea352d;
+  }
+  .input-default{
+    width: 290px;
+    margin: 8px 0 0;
+  }
+  select{
+    width: 100%;
+  }
+}
+
+.signup-recapcha{
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
