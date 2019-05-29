@@ -67,3 +67,4 @@ gem 'pry-rails'
 gem 'sprockets', '3.7.2'
 gem 'devise'
 gem 'font-awesome-rails'
+gem 'recaptcha', require: "recaptcha/rails"
