@@ -61,21 +61,51 @@ nav {
   }
 }
 
+aside {
+  display: block;
+}
+
+.app-banner{
+  height: 260px;
+  background: url("kouhou.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
 label {
   display: inline-block;
 }
 
 .text-right{
   text-align: right;
+  &--attention{
+    margin: 4px 0;
+  }
+}
+
+.form-question{
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #0099e8;
+  color: #fff;
+  line-height: 14px;
+  font-size: 12px;
+  text-align: center;
 }
 
 select{
-  outline:none;
+  outline: none;
   text-indent: 0.01px;
   vertical-align: middle;
   color: inherit;
   -webkit-appearance: button;
   -moz-appearance: button;
+}
+
+img{
+  vertical-align: middle;
 }
 
 select option{
