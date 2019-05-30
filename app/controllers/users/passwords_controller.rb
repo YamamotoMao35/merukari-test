@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
 class Users::PasswordsController < Devise::PasswordsController
+
+  def sentMail
+    @sent = 'password'
+  end
+
   # GET /resource/password/new
   # def new
   #   super
@@ -21,7 +26,11 @@ class Users::PasswordsController < Devise::PasswordsController
   #   super
   # end
 
-  # protected
+  protected
+
+  def sent_mail_path_for(resource)
+    sentMail_path
+  end
 
   # def after_resetting_password_path_for(resource)
   #   super(resource)

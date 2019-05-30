@@ -1,0 +1,23 @@
+.registration-page
+  .new-registration
+    %header.new-registration__header
+      %h1
+        = link_to root_path do
+          = image_tag "logo.svg", alt: "mercari"
+    %main.registration-menu
+      %section.registration-title
+        %h2.registration-title__head
+          メールを送信しました。
+        .registration-box
+          %p.password-reset-done
+            %span aaaaa@amail.com
+            へメールを送信しました。メールに記載されたURLをクリックして、パスワードの変更を完了してください。
+            %br/
+            メールが届かない場合、再度送信してください。
+          %p.mail-sending
+            = link_to new_user_password_path do
+              再度送信する
+          %p.password-reset-done
+            = link_to root_path do
+              メルカリのトップページへ
+  = render "items/entry-footer"

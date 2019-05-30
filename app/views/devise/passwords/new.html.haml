@@ -1,10 +1,26 @@
-%h2 Forgot your password?
-= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .actions
-    = f.submit "Send me reset password instructions"
-= render "devise/shared/links"
+.registration-page
+  .new-registration
+    %header.new-registration__header
+      %h1
+        = link_to root_path do
+          = image_tag "logo.svg", alt: "mercari"
+    %main.registration-menu
+      %section.registration-title
+        %h2.registration-title__head
+          パスワードをお忘れの方
+        .registration-box
+          .registration-box__content
+            = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+              .login-form-content
+                %ul
+                  %li
+                    = f.label :email, "メールアドレス"
+                    = f.email_field :email, autofocus: true, autocomplete: "email",placeholder: "ご登録されたメールアドレス", class: "input-default"
+                    %p.password-reset-info
+                      ご登録されたメールアドレスにパスワード再設定のご案内が送信されます。
+                  %li
+                    .signup-recaptcha
+                  %li.login-submit
+                    = link_to sentMail_path do
+                      = f.submit "送信する", class:"btn-default btn-red"
+  = render "items/entry-footer"
