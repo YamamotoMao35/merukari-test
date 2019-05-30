@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     get 'address' => 'users/registrations#address'
     get 'payMethod' => 'users/registrations#payMethod'
     get 'complete' => 'users/registrations#complete'
+    get 'sentMail' => 'users/passwords#sentMail'
   end
 
   root 'items#index'
