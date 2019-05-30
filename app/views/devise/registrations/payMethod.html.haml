@@ -1,11 +1,28 @@
 .personal-entry
-  = render "items/entry-header"
-  %main.personal-entry__main
+  %header.personal-entry__header
+    %h1
+      = link_to root_path do
+        = image_tag "logo.svg", alt: "mercari"
+    %nav.progress-bar.signup-bar
+      %ol.clearfix
+        %li.through
+          会員情報
+          .progress-status
+        %li.through
+          電話番号認証
+          .progress-status
+        %li.through
+          住所入力
+          .progress-status
+        %li.active
+          支払い方法
+          .progress-status
+        %li
+          完了
+          .progress-status
+  %main.personal-entry-main
     %section.entry-container
-      %h2.sms-head
-      お支払い方法
-    = form_for @payMethod do |f|
-      %li.actions
-        = link_to complete_path do
-          = f.submit "次へ進む", class:"btn-default btn-red"
+      %h2.entry-container__head
+        お支払い方法
+      =render "payMethod"
   = render "items/entry-footer"
