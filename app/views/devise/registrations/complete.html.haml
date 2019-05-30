@@ -1,12 +1,39 @@
 .personal-entry
-  = render "items/entry-header"
-  %main.personal-entry__main
+  %header.personal-entry__header
+    %h1
+      = link_to root_path do
+        = image_tag "logo.svg", alt: "mercari"
+    %nav.progress-bar.signup-bar
+      %ol.clearfix
+        %li.through
+          会員情報
+          .progress-status
+        %li.through
+          電話番号認証
+          .progress-status
+        %li.through
+          住所入力
+          .progress-status
+        %li.through
+          支払い方法
+          .progress-status
+        %li.active
+          完了
+          .progress-status
+  %main.personal-entry-main
     %section.entry-container
-      %h2.sms-head
-      完了画面
-    = form_for @complete do |f|
-      %li.actions
-        = link_to root_path do
-          = f.submit "メルカリを始める", class:"btn-default btn-red"
-        = render "devise/shared/links"
+      %h2.entry-container__head
+        会員登録完了
+      .single-inner.entry-form
+        .person-content
+          = form_for @complete do |f|
+            %ul
+              %li.finish-registration
+                %p ありがとうございます。
+                %br/
+                %p 会員登録が完了しました。
+              %li.actions
+                = link_to root_path do
+                  = f.submit "メルカリを始める", class:"btn-default btn-red"
+      %aside.app-banner
   = render "items/entry-footer"
