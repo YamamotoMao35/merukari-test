@@ -13,10 +13,11 @@
             = link_to new_user_registration_path, class: "btn-default btn-mail" do
               %i.far.fa-envelope.icon-mail
               メールアドレスで登録
-            %button#facebook-login.btn-default.btn-sns.btn-sns__facebook
-              %i.icon-facebook
-                =image_tag "facebook-icon.svg", alt:"facebook", width: "26px",height: "26px";
-              Facebookで登録
+            %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
+              = link_to new_user_session_path do
+                %i.icon-facebook
+                  = image_tag "facebook-icon.svg", alt:"facebook", width: "26px",height: "26px";
+                Facebookで登録
             %button#google-login.btn-default.btn-sns.btn-sns__google
               Googleで登録
       = render 'entry-footer'
