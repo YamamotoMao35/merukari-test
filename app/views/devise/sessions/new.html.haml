@@ -1,17 +1,33 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+.personal-entry
+  %header.personal-entry__header
+    %h1
+      = link_to root_path do
+        = image_tag "logo.svg", alt: "mercari"
+  %main.personal-entry-main
+    %section.login-panel
+      %h2.login-no-account
+        %p アカウントをお持ちでない方はこちら
+        = link_to root_path do
+          新規会員登録
+      .login-form-inner
+        %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
+          %i.icon-facebook
+            = image_tag "facebook-icon.svg", alt:"facebook", width: "26px",height: "26px";
+          Facebookでログイン
+        %button#google-login.btn-default.btn-sns.btn-sns__google
+          Googleでログイン
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .login-form-content
+          %ul
+            %li
+              = f.email_field :email, autofocus: true, autocomplete: "email", class: "input-default"
+            %li
+              = f.password_field :password, autocomplete: "current-password", class: "input-default"
+            %li
+              .signup-recaptcha
+            %li.login-submit
+              = link_to root_path do
+                = f.submit "ログイン", class:"btn-default btn-red"
+            = link_to new_user_password_path do
+              パスワードをお忘れの方
+  = render "items/entry-footer"
