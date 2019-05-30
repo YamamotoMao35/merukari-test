@@ -5,15 +5,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_account_update_params, only: [:update]
 
   def sms
-    @sms = 'sms'
+    @sms = 'phone-number'
   end
 
   def address
-    @address = 'address'
+    @address = 'name'
   end
 
   def payMethod
-    @payMethod = 'payMethod'
+    @payMethod = 'kana_name'
   end
 
   def complete
