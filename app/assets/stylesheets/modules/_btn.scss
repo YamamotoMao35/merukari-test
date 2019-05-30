@@ -21,6 +21,16 @@
   color: #000;
 }
 
+.btn-sns-facebook{
+  position: relative;
+  margin: 16px 0 0;
+  background: #385185;
+  color: #fff;
+  &:first-child{
+    margin: 0;
+  }
+}
+
 .btn-sns{
   position: relative;
   i{
@@ -29,11 +39,6 @@
     left: 16px;
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
-  }
-  &__facebook{
-    margin: 16px 0 0;
-    background: #385185;
-    color: #fff;
   }
   &__google{
     margin: 16px 0 0;

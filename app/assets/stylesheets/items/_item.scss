@@ -41,6 +41,14 @@
             max-width: 320px;
             margin: 0 auto;
           }
+          p {
+            margin: 8px 0 0;
+            line-height: 1.5;
+          }
+          span {
+            padding: 4px 6px;
+            background: #eee;
+          }
         }
       }
     }
@@ -85,6 +93,14 @@
         &__content{
           max-width: 320px;
           margin: 0 auto;
+        }
+        p {
+          margin: 8px 0 0;
+          line-height: 1.5
+        }
+        span {
+          padding: 4px 6px;
+          background: #eee;
         }
       }
     }
