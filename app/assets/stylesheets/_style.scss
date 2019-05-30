@@ -76,6 +76,18 @@ label {
   display: inline-block;
 }
 
+main {
+  display: block;
+}
+
+section {
+  display: block;
+}
+
+small{
+  font-size: 13px;
+}
+
 .text-right{
   text-align: right;
   &--attention{

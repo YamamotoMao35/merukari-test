@@ -52,3 +52,19 @@ li{
     vertical-align: middle;
   }
 }
+
+#name_prefecture_id{
+  background: #fff;
+}
+
+.prefecture-info{
+  .select-wrap{
+    position: relative;
+    .input-default{
+      padding: 10px 16px;
+    }
+    .fas.fa-angle-down{
+      @include arrow-down;
+    }
+  }
+}

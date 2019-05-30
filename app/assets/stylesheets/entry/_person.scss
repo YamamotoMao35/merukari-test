@@ -3,53 +3,11 @@
   padding: 40px;
 }
 
-.input-default {
-  height: 48px;
-  padding: 10px 14px 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background: #fff;
-  line-height: 1.5;
-  font-size: 16px;
-}
-
 .expiration-date{
   .select-wrap{
     display: inline-block;
     width: 35%;
   }
-}
-
-.select-default {
-  position: relative;
-  z-index: 2;
-  height: 48px;
-  padding: 0 16px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background: 0;
-  font-size: 16px;
-  line-height: 1.5;
-  cursor: pointer;
-}
-
-.form-require {
-  margin: 0 0 0 8px;
-  padding: 2px 4px;
-  border-radius: 2px;
-  color: #fff;
-  font-size: 12px;
-  vertical-align: top;
-  &__gray{
-    background-color: gray;
-    color: #fff;
-  }
-}
-
-.form-info-text{
-  margin: 8px 0 0;
-  color: #888;
-  line-height: 1.5;
 }
 
 .personal-entry{
@@ -107,7 +65,6 @@
         }
         .expiration-date{
           .select-wrap{
-            display: inline-block;
             position: relative;
             .select-default{
               padding: 0 16px;
@@ -116,14 +73,7 @@
               margin: 0 2px;
             }
             .fas.fa-angle-down{
-              position: absolute;
-              right: 16px;
-              top: 50%;
-              z-index: 2;
-              color: #888;
-              font-size: 18px;
-              -webkit-transform: translate(0, -50%);
-              transform: translate(0, -50%);
+              @include arrow-down;
             }
           }
         }
@@ -187,14 +137,7 @@
               margin: 0 2px;
             }
             .fas.fa-angle-down{
-              position: absolute;
-              right: 16px;
-              top: 50%;
-              z-index: 2;
-              color: #888;
-              font-size: 18px;
-              -webkit-transform: translate(0, -50%);
-              transform: translate(0, -50%);
+              @include arrow-down;
             }
           }
         }
