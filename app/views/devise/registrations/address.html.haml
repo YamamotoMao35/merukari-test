@@ -45,7 +45,11 @@
               %li
                 = f.label :"都道府県"
                 %span.form-require 必須
-                = f.text_field :name,placeholder: "例) 123-4567",class: "input-default"
+                .prefecture-info
+                  .select-wrap
+                    .input-default
+                      = f.collection_select :prefecture_id, Prefecture.all, :id, :name
+                      %i.fas.fa-angle-down
               %li
                 = f.label :"市区町村"
                 %span.form-require 必須
@@ -55,7 +59,7 @@
                 %span.form-require 必須
                 = f.text_field :name,placeholder: "例) 青山1-1-1",class: "input-default"
               %li
-                = f.label :"番地"
+                = f.label :"建物名"
                 %span.form-require__gray 任意
                 = f.text_field :name,placeholder: "例) 柳ビル103",class: "input-default"
               %li
