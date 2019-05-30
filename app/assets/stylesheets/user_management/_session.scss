@@ -1,0 +1,57 @@
+.password-reset-done {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  a {
+    display: block;
+    margin: 40px 0 0;
+    text-align: center;
+  }
+}
+
+.personal-entry-main{
+  .login-panel{
+    max-width: 456px;
+    margin: 0 auto;
+    background: #fff;
+    a {
+      display: block;
+      margin: 40px 0 0;
+    }
+    .login-no-account {
+      padding: 24px 32px;
+      text-align: center;
+      p {
+        font-size: 14px;
+      }
+      a {
+        display: block;
+        margin: 8px 0 0;
+        border: 1px solid #0099e8;
+        background: #0099e8;
+        color: #fff;
+        line-height: 40px;
+      }
+    }
+    .login-form-inner{
+      padding: 24px 32px;
+      border-top: 1px solid #eee;
+    }
+    .login-form-content{
+      padding: 24px 32px;
+      border: 0;
+      li:first-child{
+        margin: 0;
+      }
+      li {
+        margin: 24px 0 0;
+        .login-submit{
+          margin: 24px 0 0;
+        }
+      }
+      .input-default{
+        margin: 0;
+      }
+    }
+  }
+}
