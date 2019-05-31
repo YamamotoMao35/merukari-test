@@ -1,16 +1,11 @@
 .single-inner{
+  @include box-size;
   border-top: 1px solid #f5f5f5;
   padding: 40px;
 }
 
-.expiration-date{
-  .select-wrap{
-    display: inline-block;
-    width: 35%;
-  }
-}
-
 .personal-entry{
+  // 会員情報入力画面に使う
   @media screen and (min-width: 769px){
     padding: 0 0 220px;
     &__header{
@@ -44,11 +39,6 @@
           line-height: 1.5;
           text-align: center;
           font-weight: bold;
-          &--sms{
-            padding: 8px 24px;
-            border-bottom: 1px solid #f5f5f5;
-            font-size: 24px;
-          }
         }
       }
       .entry-form{
@@ -62,20 +52,6 @@
         }
         .btn-red{
           margin: 40px 0 0;
-        }
-        .expiration-date{
-          .select-wrap{
-            position: relative;
-            .select-default{
-              padding: 0 16px;
-            }
-            span{
-              margin: 0 2px;
-            }
-            .fas.fa-angle-down{
-              @include arrow-down;
-            }
-          }
         }
       }
     }
@@ -111,11 +87,6 @@
           line-height: 1.5;
           text-align: center;
           font-weight: bold;
-          &--sms{
-            padding: 12px 4%;
-            border-bottom: 1px solid #f5f5f5;
-            font-size: 18px;
-          }
         }
       }
       .entry-form{
@@ -126,20 +97,6 @@
         margin: 0 auto;
         .btn-red{
           margin: 40px 0 0;
-        }
-        .expiration-date{
-          .select-wrap{
-            position: relative;
-            .select-default{
-              padding: 0 16px;
-            }
-            span{
-              margin: 0 2px;
-            }
-            .fas.fa-angle-down{
-              @include arrow-down;
-            }
-          }
         }
       }
     }

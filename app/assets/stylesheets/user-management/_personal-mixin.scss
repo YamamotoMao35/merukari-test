@@ -17,3 +17,7 @@
   color: #fff;
   line-height: 40px;
 }
+
+@mixin box-size{
+  box-sizing: border-box;
+}
