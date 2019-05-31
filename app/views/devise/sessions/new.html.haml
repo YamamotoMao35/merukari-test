@@ -20,9 +20,9 @@
         .login-form-content
           %ul
             %li
-              = f.email_field :email, autofocus: true, autocomplete: "email", class: "input-default"
+              = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", class: "input-default"
             %li
-              = f.password_field :password, autocomplete: "current-password", class: "input-default"
+              = f.password_field :password, autocomplete: "current-password", placeholder: "パスワード", class: "input-default"
             %li
               .signup-recaptcha
             %li.login-submit
