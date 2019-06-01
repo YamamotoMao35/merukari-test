@@ -13,7 +13,5 @@ Rails.application.routes.draw do
     get 'sentMail' => 'users/passwords#sentMail'
   end
 
-  resources :users, only: [:index]
-
   root 'items#index'
 end

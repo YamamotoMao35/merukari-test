@@ -1,0 +1,143 @@
+* {
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+* {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+* ,::before, ::after{
+  border-style: solid;
+  border-width: 0;
+}
+
+::before, ::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+::before, ::after{
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+.far.fa-chevron-right::before{
+  content: '\e005';
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+  line-height: 1;
+  background: rgb(245, 245, 245);
+}
+
+a {
+  color: #0099e8;
+  text-decoration: none;
+}
+
+header {
+  display: block;
+}
+
+nav {
+  display: block;
+  ul {
+    list-style: none;
+  }
+  ol {
+    list-style: none;
+  }
+}
+
+aside {
+  display: block;
+}
+
+.app-banner{
+  height: 260px;
+  background: url("kouhou.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+label {
+  display: inline-block;
+}
+
+main {
+  display: block;
+}
+
+section {
+  display: block;
+}
+
+small{
+  font-size: 13px;
+}
+
+.text-right{
+  text-align: right;
+  &--attention{
+    margin: 4px 0;
+  }
+}
+
+.form-question{
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #0099e8;
+  color: #fff;
+  line-height: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+
+select{
+  outline: none;
+  text-indent: 0.01px;
+  vertical-align: middle;
+  color: inherit;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+}
+
+img{
+  vertical-align: middle;
+}
+
+select option{
+background-color: #fff;
+color: #333;
+}
+
+select::-ms-expand {
+display: none;
+}
+
+select:-moz-focusring { 
+color: transparent; 
+text-shadow: 0 0 0 #828c9a;
+}
+
+.clearfix{
+  &::after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

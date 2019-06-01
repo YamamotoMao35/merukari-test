@@ -1,6 +1,4 @@
 .input-default {
-  // デフォルトの入力ボックスに使う
-  @include box-size;
   height: 48px;
   padding: 10px 16px 8px;
   border-radius: 4px;
@@ -11,7 +9,6 @@
 }
 
 .select-default {
-  // セレクトボックスに使う
   position: relative;
   z-index: 2;
   height: 48px;
@@ -25,7 +22,6 @@
 }
 
 .form-require {
-  // 必須
   margin: 0 0 0 8px;
   padding: 2px 4px;
   border-radius: 2px;
