@@ -3,14 +3,6 @@
   text-align: center;
 }
 
-li:first-child ::before{
-  content: none;
-}
-
-li:last-child ::after{
-  content: none;
-}
-
 .progress-status {
   width: 12px;
   height: 12px;
@@ -58,25 +50,31 @@ li:last-child ::after{
           &::before{
             background: #ea352d;
           }
-        }
-      }
-      .active {
-        font-weight: 600;
-        color: #ea352d;
-        .progress-status{
-          background: #ea352d;
-          z-index: 1;
-          &::before{
-            background: #ea352d;
+          &:first-child ::before{
+            content: none;
           }
-        }
-      }
-      .through{
-        .progress-status{
-          background: #ea352d;
-          z-index: 1;
-          &::before, &::after{
-            background: #ea352d;
+          &:last-child ::after{
+            content: none;
+          }
+          &.active {
+            font-weight: 600;
+            color: #ea352d;
+            .progress-status{
+              background: #ea352d;
+              z-index: 1;
+              &::before{
+                background: #ea352d;
+              }
+            }
+          }
+          &.through{
+            .progress-status{
+              background: #ea352d;
+              z-index: 1;
+              &::before, &::after{
+                background: #ea352d;
+              }
+            }
           }
         }
       }
